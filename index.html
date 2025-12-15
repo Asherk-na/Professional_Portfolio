@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Tomson Katau</title>
+  <meta name="description" content="Tomson Katau — Accounting student and aspiring accounting professional. Portfolio and resume." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/IMG_0584-1-480.jpg">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/main.js"></script>
+  <style>
+    /* small inline styles for nav visible state on smaller screens */
+    #navLinks{display:flex;gap:16px}
+    #navLinks.open{display:block}
+    @media(max-width:900px){
+      #navLinks{display:none}
+      #menuToggle{display:inline-block}
+    }
+  </style>
+</head>
+<body>
+  <!-- Accessibility: skip link -->
+  <a class="skip-link" href="#home">Skip to content</a>
+  <header role="banner">
+    <div class="container header-inner">
+        <div class="brand">
+          <div class="brand-avatar">TK</div>
+          <div class="brand-name">Tomson Katau</div>
+        </div>
+      <nav>
+        <div id="navOverlay" class="nav-overlay" aria-hidden="true"></div>
+        <button id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks" style="display:none;padding:8px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.08);color:#fff">☰</button>
+        <div id="navLinks" role="navigation" aria-label="Main navigation">
+          <a href="#home" class="btn nav-link">Home</a>
+          <a href="#academics" class="btn nav-link">Academics</a>
+          <a href="#experience" class="btn nav-link">Experience</a>
+          <a href="#skills" class="btn nav-link">Skills</a>
+          <a href="#contact" class="btn nav-link">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main role="main">
+    <section id="home" class="container hero reveal">
+      <div class="profile-photo" aria-hidden="false">
+        <!-- Responsive image set: webp + fallbacks -->
+        <picture>
+          <source type="image/webp" srcset="assets/IMG_0584-1-240.webp 240w, assets/IMG_0584-1-480.webp 480w" sizes="(max-width:480px) 120px, 230px">
+          <img src="assets/IMG_0584-1-480.jpg" srcset="assets/IMG_0584-1-240.jpg 240w, assets/IMG_0584-1-480.jpg 480w, assets/IMG_0584-1.jpg 768w" alt="Profile photo of Tomson Katau" width="480" height="752" loading="eager" onerror="this.src='assets/photo.svg'" />
+        </picture>
+      </div>
+      <div>
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;">
+          <div>
+            <h1 class="h1">Tomson Katau</h1>
+            <p class="p3 tagline">Accounting student at Namibia University of Science and Technology (NUST), Windhoek — Aspiring accounting professional focused on accuracy, analysis, and problem solving.</p>
+          </div>
+          <div style="display:flex;gap:10px;align-items:center;margin-top:8px">
+            <a class="btn" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" title="Open or download CV">Download CV</a>
+            <a class="btn secondary" href="#contact">Contact</a>
+          </div>
+        </div>
+
+        <div style="margin-top:20px;display:flex;gap:18px;align-items:center;flex-wrap:wrap">
+          <div class="small"><strong>Location:</strong> Windhoek, Namibia</div>
+          <div class="small"><strong>Open to:</strong> Accounting/Finance entry-level roles, internships, and assistant positions</div>
+        </div>
+
+        <div style="margin-top:24px;">
+          <p class="small">A motivated and responsible accounting student who balances academic rigour with practical skills in bookkeeping and financial reporting. I bring experience collaborating on university projects and working on practical data entry and reconciliations during internships and part-time roles. I'm seeking to grow with a team that prioritizes precision, learning, and ethical accounting practices.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="academics" class="container section">
+      <h2>Academic Background</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Bachelor of Accounting</h3>
+          <p class="small">Namibia University of Science and Technology (NUST) — Windhoek</p>
+          <p class="small">January 2018 — November 2021</p>
+          <ul>
+            <li>Relevant modules: Financial Accounting, Management Accounting, Auditing, Taxation, Cost Accounting, Financial Reporting</li>
+            <li>Achievements: Strong academic performance in Accounting and Auditing modules</li>
+            <li>NSFAF Bursary: Supported my studies — demonstrates financial responsibility and dedication to my academic progress</li>
+          </ul>
+        </div>
+         
+        <div class="card">
+          <h3>Namibia Senior Secondary Cetificate</h3>
+          <p class="small">Namib High School Swakopmund</p>
+          <p class="small">January 2018 — November 2022</p>
+          <ul>
+            <li>Relevant modules: Financial Accounting, Management Accounting, Auditing, Taxation, Cost Accounting, Financial Reporting</li>
+            <li>Achievements: Strong academic performance in Accounting and Auditing modules</li>
+            <li>NSFAF Bursary: Supported my studies — demonstrates financial responsibility and dedication to my academic progress</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Deutsch Sprach Diploma</h3>
+          <p class="small">Namib High School</p>
+          <p class="small">January 2021 — November 2021</p>
+          
+        </div>
+
+        <div class="card">
+          <h3>Certificates & Achievements</h3>
+          <ul>
+            <li>Certificate in the Introduction to Accounting & bookkeeping (Open Learning Institute)</li>
+            <li>Certificate in the Introduction to Financial Accounting</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="experience" class="container section">
+      <h2>Professional Experience</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Internships</h3>
+          <p class="small">Merary Auto Garage: Hands-on book-keeping role (January 2020- December 2024)</p>
+          <ul>
+            <li>Assisted with data entry, supplier payments, and bank reconciliations</li>
+            <li>Prepared chronological expense reports and supported month-end closing</li>
+            <li>Worked with Numpy and Excel to ensure clean ledgers and accurate reporting</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Major University Projects</h3>
+          <p class="small">Financial Statement Analysis</p>
+          <ul>
+            <li>Performed ratio analysis and compiled a full-set of financial statements for a JSE</li>
+            <li>Delivered a presentation with recommendations for operational improvement</li>
+            <li>Used Excel and collaborative tools to analyze trends and forecast cash flows</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="container section">
+      <h2>Skills</h2>
+      <div class="card">
+        <h3>Software skills</h3>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <span class="skill-chip">Microsoft Excel</span>
+          <span class="skill-chip">Word</span>
+          <span class="skill-chip">PowerPoint</span>
+          <span class="skill-chip">Tableau</span>
+        </div>
+
+
+        <h3 style="margin-top:14px">Other Soft Skills</h3>
+        <ul>
+          <li>Bookkeeping & Data analysis</li>
+          <li>Financial statement analysis</li>
+          <li>Analytical thinking, responsible & reliable</li>
+          <li>Strong written and oral communication skills</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="interests" class="container section">
+      <h2>Interests & Hobbies</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Interests</h3>
+          <ul>
+            <li>Competitive Chess or Strategic Board Games</li>
+            <li>Personal Financial Modelling or Investment Analysis</li>
+            <li>Exploring Data & Programming (e.g., Python/VBA)</li>
+            <li>Continuous Professional Development</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Volunteer & Extracurricular</h3>
+          <ul>
+            <li>Helping various SME businesses ensure that their Financial sttements are up to date.</li>
+            <li>Community involvement: mentoring students during exam periods.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="container section">
+      <h2>Contact</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Contact Information</h3>
+          <ul class="contact-list">
+            <li>Email: <a href="mailto:asherkatau@gmail.com">asherkatau@gmail.com</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/tomson-katau-54801130a" target="_blank" rel="noopener noreferrer" title="Tomson Katau on LinkedIn">linkedin.com/in/tomson-katau</a></li>
+            <li>Phone: <span class="muted">+264 81 729 0375</span></li>
+            <li>Location: Windhoek, Namibia</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Send a quick message</h3>
+          <p class="small">Use the email link above to contact me. This is a simple static portfolio, so the form uses a mailto link — replace with a server-side action if you add a back-end later.</p>
+          <a class="btn" href="mailto:asherkatau@gmail.com" title="Send an email">Email Me</a>
+          <a class="btn secondary" href="assets/resume.pdf">Download Resume</a>
+        </div>
+      </div>
+
+    </section>
+
+    <footer role="contentinfo">
+      <div class="container">Built with care • Tomson Katau • © <span id="year"></span></div>
+    </footer>
+
+    <button id="backToTop" class="btn" aria-label="Back to top" title="Back to top" style="position:fixed;right:20px;bottom:20px;display:none">↑ Top</button>
+
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

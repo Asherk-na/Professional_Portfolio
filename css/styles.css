@@ -1,0 +1,174 @@
+/* Global variables */
+:root{
+  --navy: #0d3b66; /* main navy color */
+  --accent: #e6f7ff; /* light blue accent background */
+  --bg-alt: #dff6ff; /* slightly darker blue for gentle gradient */
+  --accent-dark: #0c2f56;
+  --text: #10222b;
+  --muted: #47555c; /* slightly darker muted color for better contrast */
+  --muted-2: #5f6b73;
+  --elevation: 0 8px 22px rgba(13,59,102,0.08);
+  --muted: #6d7881; /* muted text */
+  --black:#0b0b0b;
+  --white:#ffffff;
+  --border: 1px solid rgba(13,59,102,0.06);
+  --border-strong: 1px solid rgba(13,59,102,0.12);
+  --hover-duration: 0.20s;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:var(--muted);
+  background:linear-gradient(180deg,var(--accent), var(--bg-alt));
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Navbar */
+header{
+  position:fixed;
+  top:0;left:0;right:0;
+  background:rgba(13,59,102,0.95);
+  color:var(--white);
+  z-index:1100;
+}
+header{border-bottom:1px solid rgba(255,255,255,0.06)}
+header .container{display:flex;align-items:center;justify-content:space-between;padding:10px 18px}
+header nav{margin-left:auto;display:flex;align-items:center}
+@media (min-width:900px){
+  /* Pin the nav to the top-right corner (desktop only) */
+  header nav{position:absolute;right:18px;top:10px}
+  /* Keep container padding to avoid overlapping the nav on wider screens */
+  header .container{padding-right:120px}
+}
+header{backdrop-filter: blur(4px);box-shadow:0 6px 18px rgba(13,59,102,0.06)}
+header .brand{display:flex;align-items:center;gap:12px}
+header .brand-avatar{width:46px;height:46px;border-radius:10px;background:var(--white);display:flex;align-items:center;justify-content:center;color:var(--navy);font-weight:700}
+header .brand-avatar{transition:transform .18s ease}
+header .brand-avatar:hover{transform:rotate(-6deg) scale(1.03)}
+header .brand-name{font-weight:700;color:var(--white);font-size:15px}
+nav a{color:var(--white);text-decoration:none;padding:8px 10px;border-radius:6px}
+nav a:hover{background:#ffffff10;transform:translateY(-2px)}
+@media (max-width:900px){
+  nav a{display:block;padding:12px 8px}
+  #navLinks{background:transparent;position:absolute;top:68px;right:16px;padding:14px;background:rgba(255,255,255,0.06);border-radius:10px;display:none;flex-direction:column;gap:10px}
+  #navLinks.open{display:flex}
+  #menuToggle{display:inline-block}
+}
+/* Overlay for mobile nav */
+.nav-overlay{position:fixed;inset:0;background:linear-gradient(180deg,rgba(2,6,23,0.25), rgba(2,6,23,0.45));display:none;z-index:900}
+.nav-overlay[aria-hidden="true"]{display:none}
+.nav-overlay[aria-hidden="false"]{display:block}
+body.nav-open{overflow:hidden}
+/* Desktop nav polishing */
+#navLinks a{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:8px;position:relative}
+#navLinks a::after{content:'';position:absolute;height:2px;background:linear-gradient(90deg,var(--accent), rgba(255,255,255,0.25));bottom:6px;left:10px;right:10px;transform:scaleX(0);transform-origin:left center;transition:transform .22s ease,opacity .22s ease;opacity:0}
+#navLinks a:hover::after{transform:scaleX(1);opacity:1}
+#navLinks a:hover{background:rgba(255,255,255,0.08)}
+/* Header nav link default */
+.nav-link{background:transparent;color:var(--white);font-weight:600}
+.nav-link{background:transparent;color:var(--white);font-weight:600;transition:transform .18s ease, background .18s ease}
+.nav-link:hover{background:rgba(255,255,255,0.08);transform:translateY(-2px)}
+
+.container{max-width:1100px;margin:0 auto;padding:100px 20px 60px}
+
+/* Mobile nav animation */
+@keyframes navSlideIn { from { opacity:0; transform: translateY(-10px) } to { opacity:1; transform: translateY(0) } }
+#navLinks.open{ animation: navSlideIn .18s ease; }
+
+/* Hero */
+.hero{
+  background:linear-gradient(90deg, rgba(10,20,34,0.85) 0%, rgba(13,59,102,0.95) 35%, rgba(255,255,255,0) 100%);
+  border-radius:8px;
+  border:var(--border);
+  color:var(--white);
+  padding:40px;
+  display:grid;
+  grid-template-columns: 230px 1fr;
+  gap:24px;
+  align-items:center;
+}
+.profile-photo{
+  height:230px;width:230px;border-radius:10px;overflow:hidden;background:var(--white);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(10,20,34,0.12);border:var(--border)
+}
+.profile-photo img{width:100%;height:100%;object-fit:cover;opacity:0;transform:translateY(6px);transition:opacity .45s ease, transform .45s ease}
+.profile-photo img.loaded{opacity:1;transform:none}
+
+.h1{font-size:28px;margin:0 0 8px}
+.p3{font-size:15px;margin:0}
+.tagline{font-weight:600}
+
+/* Hero text entrance */
+.hero .h1, .hero .p3, .hero .btn{opacity:0;transform:translateY(8px);transition:opacity .35s var(--hover-duration) ease, transform .35s var(--hover-duration) ease}
+.hero.reveal.visible .h1, .hero.reveal.visible .p3, .hero.reveal.visible .btn{opacity:1;transform:none}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);cursor:pointer;font-weight:600;text-decoration:none;color:var(--white);background:var(--navy);transition:all var(--hover-duration) ease}
+.btn.secondary{background:#192f49;color:var(--accent)}
+.btn:hover{transform:translateY(-3px);box-shadow:var(--elevation);filter:brightness(1.02)}
+.btn:focus, .nav-link:focus{outline:none;box-shadow:0 0 0 3px rgba(13,59,102,0.12)}
+
+/* Sections */
+.section{margin-top:36px;padding:30px;background:var(--white);border-radius:12px;box-shadow:var(--elevation)}
+.section{border:var(--border)}
+.section h2{margin:0 0 18px;color:var(--navy);font-weight:700}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+
+.card{padding:20px;border-radius:12px;background:var(--white);border:var(--border-strong);transition:transform var(--hover-duration) ease, box-shadow var(--hover-duration) ease}
+.card:hover{transform:translateY(-6px);box-shadow:var(--elevation)}
+
+/* Skills - chips */
+.skill-chip{display:inline-flex;font-size:13px;padding:8px 10px;border-radius:999px;margin:6px;border:1px solid var(--bg-alt);background:white;color:var(--navy);transition:transform var(--hover-duration) ease, box-shadow var(--hover-duration) ease}
+
+/* Progress bar */
+.progress-wrap{margin:6px 0 14px}
+.progress{height:10px;background:#e6eef7;border-radius:100px;overflow:hidden}
+.progress > span{display:block;height:100%;background:linear-gradient(90deg,var(--navy),#114a6b)}
+
+/* Contact */
+.contact-list{list-style:none;padding:0;margin:0}
+.contact-list li{margin:8px 0;color:var(--muted)}
+.contact-list a{color:var(--navy);text-decoration:none;font-weight:600}
+
+/* Footer */
+footer{text-align:center;padding:16px 0;color:var(--muted);font-size:13px}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero{grid-template-columns:120px 1fr;padding:20px}
+  .container{padding-top:120px}
+  .grid-2{grid-template-columns:1fr}
+}
+
+@media (max-width:480px){
+  .profile-photo{height:120px;width:120px}
+  .hero{grid-template-columns:1fr}
+}
+
+/* Utility */
+.muted{color:var(--muted)}
+.center{text-align:center}
+.small{font-size:13px;color:var(--muted)}
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{position:static;left:auto;width:auto;height:auto;padding:10px 14px;border-radius:8px;background:var(--navy);color:var(--white);display:inline-block;margin:10px}
+
+/* Strong visible focus for keyboard users (WCAG friendly) */
+:focus-visible{outline:3px solid rgba(255,255,255,0.12);outline-offset:3px}
+.btn:focus-visible, .nav-link:focus-visible, a:focus-visible{outline:3px solid rgba(13,59,102,0.16);outline-offset:4px}
+/* Reveal animation */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* Back-to-top button */
+#backToTop{display:none;opacity:0;transition:all .25s ease}
+#backToTop.visible{display:inline-flex;opacity:1}
+
+/* Menu toggle button animation */
+#menuToggle{display:none;background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px;border-radius:8px;color:var(--white);font-weight:700;transition:all var(--hover-duration) ease}
+#menuToggle.open{transform:rotate(90deg);background:rgba(255,255,255,0.04)}
+
+/* Provide better focus ring for outline on white bg */
+.btn:focus-visible, .nav-link:focus-visible, a:focus-visible{outline:3px solid rgba(13,59,102,0.22);outline-offset:4px}
