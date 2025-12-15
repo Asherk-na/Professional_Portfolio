@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Portfolio — Tomson Katau</title>
   <meta name="description" content="Tomson Katau — Accounting student and aspiring accounting professional. Portfolio and resume." />
@@ -27,15 +27,14 @@
   <header role="banner">
     <div class="container header-inner">
         <div class="brand">
-          <div class="brand-avatar">TK</div>
-          <div class="brand-name">Tomson Katau</div>
+          <div class="brand-logo">Online <span class="pro">Portfolio</span><sup class="pro-badge">Pro</sup></div>
         </div>
       <nav>
         <div id="navOverlay" class="nav-overlay" aria-hidden="true"></div>
         <button id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks" style="display:none;padding:8px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.08);color:#fff">☰</button>
         <div id="navLinks" role="navigation" aria-label="Main navigation">
           <a href="#home" class="btn nav-link">Home</a>
-          <a href="#academics" class="btn nav-link">Academics</a>
+          <a href="#about" class="btn nav-link">About</a>
           <a href="#experience" class="btn nav-link">Experience</a>
           <a href="#skills" class="btn nav-link">Skills</a>
           <a href="#contact" class="btn nav-link">Contact</a>
@@ -45,35 +44,44 @@
   </header>
 
   <main role="main">
-    <section id="home" class="container hero reveal">
-      <div class="profile-photo" aria-hidden="false">
-        <!-- Responsive image set: webp + fallbacks -->
+    <section id="home" class="container hero reveal hero-variant">
+      <div class="hero-left">
+        <h1 class="hero-title">Tomson Katau</h1>
+        <p class="hero-sub">Accounting student at Namibia University of Science and Technology (NUST), Windhoek — Aspiring accounting professional focused on accuracy, analysis, and problem solving.</p>
+        <div class="hero-ctas">
+          <a class="btn hire" href="#contact">Hire Me</a>
+          <a class="btn secondary" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">Download Resume</a>
+        </div>
+      </div>
+      <div class="hero-image" aria-hidden="true">
         <picture>
-          <source type="image/webp" srcset="assets/IMG_0584-1-240.webp 240w, assets/IMG_0584-1-480.webp 480w" sizes="(max-width:480px) 120px, 230px">
-          <img src="assets/IMG_0584-1-480.jpg" srcset="assets/IMG_0584-1-240.jpg 240w, assets/IMG_0584-1-480.jpg 480w, assets/IMG_0584-1.jpg 768w" alt="Profile photo of Tomson Katau" width="480" height="752" loading="eager" onerror="this.src='assets/photo.svg'" />
+          <source type="image/webp" srcset="assets/IMG_0584-1-480.webp">
+          <img src="assets/IMG_0584-1-480.jpg" alt="Decorative hero image" onerror="this.src='assets/photo.svg'" />
         </picture>
       </div>
-      <div>
-        <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;">
-          <div>
-            <h1 class="h1">Tomson Katau</h1>
-            <p class="p3 tagline">Accounting student at Namibia University of Science and Technology (NUST), Windhoek — Aspiring accounting professional focused on accuracy, analysis, and problem solving.</p>
-          </div>
-          <div style="display:flex;gap:10px;align-items:center;margin-top:8px">
-            <a class="btn" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" title="Open or download CV">Download CV</a>
-            <a class="btn secondary" href="#contact">Contact</a>
-          </div>
-        </div>
+    </section>
 
-        <div style="margin-top:20px;display:flex;gap:18px;align-items:center;flex-wrap:wrap">
-          <div class="small"><strong>Location:</strong> Windhoek, Namibia</div>
-          <div class="small"><strong>Open to:</strong> Accounting/Finance entry-level roles, internships, and assistant positions</div>
+    <!-- About me (matches screenshot layout) -->
+    <section id="about" class="container section about-section">
+      <h2>ABOUT ME</h2>
+      <div class="about-inner">
+        <div class="about-photo">
+          <img src="assets/IMG_0584-1-240.jpg" alt="Portrait" onerror="this.src='assets/photo.svg'" />
         </div>
-
-        <div style="margin-top:24px;">
-          <p class="small">A motivated and responsible accounting student who balances academic rigour with practical skills in bookkeeping and financial reporting. I bring experience collaborating on university projects and working on practical data entry and reconciliations during internships and part-time roles. I'm seeking to grow with a team that prioritizes precision, learning, and ethical accounting practices.</p>
+        <div class="about-text">
+          <p>Software Developers use software development languages and tools to write, edit, maintain, and test computer software. Software Developers follow the software development lifecycle (SDLC) to plan, design, build, test, and deploy software applications, ranging from websites and mobile applications to web applications and video games. In addition to creating new software, Software Developers improve and maintain the working order of existing software.</p>
+          <a class="btn" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">DOWNLOAD RESUME</a>
         </div>
+      </div>
+    </section>
 
+    <!-- contact strip (blue bar) similar to screenshot -->
+    <section class="contact-strip">
+      <div class="container contact-strip-inner">
+        <div class="contact-item"><span class="icon">📍</span><div class="label">Location</div><div class="value">Windhoek, Namibia</div></div>
+        <div class="contact-item"><span class="icon">📞</span><div class="label">Phone</div><div class="value">0817290375</div></div>
+        <div class="contact-item"><span class="icon">✉️</span><div class="label">Email</div><div class="value">asherkatau@gmail.com</div></div>
+        <div class="contact-item"><span class="icon">🕒</span><div class="label">Working Hour</div><div class="value">9:00 AM - 4:00PM</div></div>
       </div>
     </section>
 
@@ -82,30 +90,44 @@
       <div class="grid-2">
         <div class="card">
           <h3>Bachelor of Accounting</h3>
-          <p class="small">Namibia University of Science and Technology (NUST) — Windhoek</p>
-          <p class="small">January 2018 — November 2021</p>
+          
           <ul>
-            <li>Relevant modules: Financial Accounting, Management Accounting, Auditing, Taxation, Cost Accounting, Financial Reporting</li>
-            <li>Achievements: Strong academic performance in Accounting and Auditing modules</li>
-            <li>NSFAF Bursary: Supported my studies — demonstrates financial responsibility and dedication to my academic progress</li>
+            <li>Institution: Namibia University of Science and Technology</li>
+            <li>Duration: February 2024 - Present</li>
+            <li>Score: Level 7</li>
+            
           </ul>
         </div>
          
         <div class="card">
-          <h3>Namibia Senior Secondary Cetificate</h3>
-          <p class="small">Namib High School Swakopmund</p>
-          <p class="small">January 2018 — November 2022</p>
+          <h3>Namibia Senior Secondary Certificate: Ordinary Level</h3>
+         
           <ul>
-            <li>Relevant modules: Financial Accounting, Management Accounting, Auditing, Taxation, Cost Accounting, Financial Reporting</li>
-            <li>Achievements: Strong academic performance in Accounting and Auditing modules</li>
-            <li>NSFAF Bursary: Supported my studies — demonstrates financial responsibility and dedication to my academic progress</li>
+            <li>Institution: Namib High School Swakopmund</li>
+            <li>Duration: January 2018 - November 2022</li>
+            <li>Score: 41 </li>
           </ul>
         </div>
 
         <div class="card">
-          <h3>Deutsch Sprach Diploma</h3>
-          <p class="small">Namib High School</p>
-          <p class="small">January 2021 — November 2021</p>
+          <h3>Namibia Senior Secondary Certificate: Advanced Subsidiary Level</h3>
+         
+          <ul>
+            <li>Institution: Namib High School Swakopmund</li>
+            <li>Duration: January 2022 - November 2022</li>
+            <li>Score: 35 </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Deutsch Sprachdiplome</h3>
+          
+
+          <ul>
+            <li>Institution: Namib High School Swakopmund</li>
+            <li>Duration: January 2021 - November 2021</li>
+            <li>Score: Level A2 </li>
+          </ul>
           
         </div>
 
@@ -154,6 +176,13 @@
           <span class="skill-chip">PowerPoint</span>
           <span class="skill-chip">Tableau</span>
         </div>
+      <div class="card">
+        <h3>Language skills</h3>
+        <ul>
+          <li>English: Fluent (written and spoken)</li>
+          <li>German: Basic proficiency (A2 level)</li>
+          <li>Afrikaans: Conversational proficiency</li>
+          <li>Damara-Nama: Native proficiency</li>
 
 
         <h3 style="margin-top:14px">Other Soft Skills</h3>
@@ -181,7 +210,7 @@
         <div class="card">
           <h3>Volunteer & Extracurricular</h3>
           <ul>
-            <li>Helping various SME businesses ensure that their Financial sttements are up to date.</li>
+            <li>Helping various SME businesses ensure that their financial statements are up to date.</li>
             <li>Community involvement: mentoring students during exam periods.</li>
           </ul>
         </div>
@@ -196,7 +225,7 @@
           <ul class="contact-list">
             <li>Email: <a href="mailto:asherkatau@gmail.com">asherkatau@gmail.com</a></li>
             <li>LinkedIn: <a href="https://www.linkedin.com/in/tomson-katau-54801130a" target="_blank" rel="noopener noreferrer" title="Tomson Katau on LinkedIn">linkedin.com/in/tomson-katau</a></li>
-            <li>Phone: <span class="muted">+264 81 729 0375</span></li>
+            <li>Phone: <a>+264 81 729 0375</a></li>
             <li>Location: Windhoek, Namibia</li>
           </ul>
         </div>
